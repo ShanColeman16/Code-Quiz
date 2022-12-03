@@ -18,7 +18,12 @@ var displayQuestion = function () {
 
 // Added advance function to advance screen forward
 var advance = function() {
-
+  if (pointer < questions.length -1) {
+    pointer++;
+  } else {
+    
+  }
+  
 
 };
 
