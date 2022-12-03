@@ -29,3 +29,6 @@ var advance = function() {
 
 // Added EventListener
 nextEl.addEventListener("click", advance);
+
+//Added to display the first question when page loads
+displayQuestion();
