@@ -12,7 +12,7 @@ var questions = [
 
 // Added function to display questions
 var displayQuestion = function () {
-
+  nextEl.textContent =  questions[pointer];
 
 };
 
@@ -23,7 +23,7 @@ var advance = function() {
   } else {
     
   }
-  
+  displayQuestion();
 
 };
 
