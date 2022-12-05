@@ -2,31 +2,32 @@ var nextEl = document.querySelector("#next");
 var pointer = 0;
 var div = document.getElementById("#questions")
 var options = document.getElementsByClassName(".options")
-var questions = [
-  "This is question one?",
-  "This is question two?",
-  "This is question three?",
-  "This is question four?",
-];
+
 
 //GIVEN I am taking a code quiz
 //STEP: 1.
 // WHEN I click the start button
 var startButtonQuizEl = document.querySelector(".Start-Quiz");
 var timerId
-//THEN a timer starts and I am presented with a question
+//THEN a timer starts 
 var timeEl = document.getElementById("timer");
 var secondsLeft = 90;
 function displayQuestion() {
   var queryAndStartTimer = function () {
-    for (pointer < questions.length; pointer++); {
+    for (pointer < questions.length; pointer++;) {
       div.innerHTML = questions[pointer]
       options.classList.add("show")
       nextEl.addEventListener("click", pointer);
     }
-
   };
-  console.log("displayQuestion");
+  //and I am presented with a question
+  var displayQuestions = function () {
+    for (var i = 0; i < questions.length; i++) {
+	const options= questions["correct"];
+
+}
+  }
+
 };
 function displayTime() {
   secondsLeft--;
@@ -38,7 +39,7 @@ function displayTime() {
 function startQuiz() {
   timerId = setInterval(displayTime, 1000)
   timeEl.textContent = secondsLeft;
-  displayQuestion()
+
 };
 
 function endQuiz() {
