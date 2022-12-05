@@ -1,3 +1,14 @@
+var nextEl = document.querySelector("#next");
+var pointer = 0;
+var div = document.getElementById("#questions")
+var options = document.getElementsByClassName(".options")
+var questions = [
+  "This is question one?",
+  "This is question two?",
+  "This is question three?",
+  "This is question four?",
+];
+
 //GIVEN I am taking a code quiz
 //STEP: 1.
 // WHEN I click the start button
@@ -7,22 +18,30 @@ var timerId
 var timeEl = document.getElementById("timer");
 var secondsLeft = 90;
 function displayQuestion() {
-  //nextEl.textContent =  questions[pointer];
+  var queryAndStartTimer = function () {
+    for (pointer < questions.length; pointer++); {
+      div.innerHTML = questions[pointer]
+      options.classList.add("show")
+      nextEl.addEventListener("click", pointer);
+    }
+
+  };
   console.log("displayQuestion");
 };
 function displayTime() {
   secondsLeft--;
   timeEl.textContent = secondsLeft;
-  if (secondsLeft <=0) {
+  if (secondsLeft <= 0) {
     endQuiz()
-  } 
+  }
 };
 function startQuiz() {
   timerId = setInterval(displayTime, 1000)
   timeEl.textContent = secondsLeft;
   displayQuestion()
 };
-function endQuiz(){
+
+function endQuiz() {
   console.log("endquiz");
   clearInterval(timerId)
 }
@@ -54,27 +73,13 @@ function endQuiz(){
 
 
 // Added nextEl = Document.querySelector("#next") to move questions forward
-var nextEl = document.querySelector("#next");
-var pointer = 0;
-var questions = [
-  "This is question one?",
-  "This is question two?",
-  "This is question three?",
-  "This is question four?",
 
-];
 
 // Added function to display questions
 
 
 // Added advance function to advance screen forward
-var queryAndStartTimer = function () {
-  if (pointer < questions.length - 1) {
-    pointer++;
-  }
-  displayQuestion();
 
-};
 
 // Added EventListener
 //nextEl.addEventListener("click", pointer);
