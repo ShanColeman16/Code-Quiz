@@ -2,48 +2,41 @@ var nextEl = document.querySelector("#next");
 var pointer = 0;
 var div = document.getElementById("#questions")
 var options = document.getElementsByClassName(".options")
-
-
-//GIVEN I am taking a code quiz
-//STEP: 1.
-// WHEN I click the start button
 var startButtonQuizEl = document.querySelector(".Start-Quiz");
 var timerId
-//THEN a timer starts 
 var timeEl = document.getElementById("timer");
 var secondsLeft = 90;
-function displayQuestion() {
-  var queryAndStartTimer = function () {
-    for (pointer < questions.length; pointer++;) {
-      div.innerHTML = questions[pointer]
-      options.classList.add("show")
-      nextEl.addEventListener("click", pointer);
-    }
-  };
+const myQuestions = []
+  myQuestions [0] = "This is question one?";
+  myQuestions [1] = "This is question two?";
+  myQuestions [2] = "This is question three?";
+
   //and I am presented with a question
   var displayQuestions = function () {
-    for (var i = 0; i < questions.length; i++) {
-	const options= questions["correct"];
+    for (var i = 0; i < myQuestions.length; i++) {
+      const myQuestions = myQuestions[0];
+      nextEl.addEventListener("click", advance);
+    }
+  };
 
-}
-  }
-
-};
-function displayTime() {
-  secondsLeft--;
-  timeEl.textContent = secondsLeft;
-  if (secondsLeft <= 0) {
-    endQuiz()
-  }
-};
 function startQuiz() {
   timerId = setInterval(displayTime, 1000)
   timeEl.textContent = secondsLeft;
 
 };
 
-function endQuiz() {
-  console.log("endquiz");
+function displayTime() {
+  secondsLeft--;
+  timeEl.textContent = secondsLeft;
+  if (secondsLeft <= 0) {
+    GameOver()
+  }
+};
+
+
+
+function GameOver() {
+  console.log("GameOver");
   clearInterval(timerId)
 }
 ////STEP 2: 

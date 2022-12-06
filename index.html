@@ -9,24 +9,27 @@
 </head>
 
 <body>
-  <h1>Code Quiz</h1>
+  <header>
+    <h1>Code Quiz</h1>
+  </header>
   <button class="Start-Quiz"> Start Quiz </button>
   <p id="timer"></p>
-  <div id="questions"></div>
-  <ul>
-    <li>
-      "This is question one?
-    </li>
-
+  <section class="questions" data-index ="0">
+    <h2> id= "This is question one?"</h2>
+  </section>
+  <section> data-index ="1">
+    <h2>"This is question two?"</h2>
+  </section>
+  <section> data-index ="2">
+    <h2>"This is question three?"</h2>
+  </section>
   </ul>
-  <ul>
-    <li>
-      <button class="options">yes</button>
-    </li>
-    <li>
-      <button class="options">no</button>
-    </li>
-
+  <li>
+    <button class="options">yes</button>
+  </li>
+  <li>
+    <button class="options">no</button>
+  </li>
   </ul>
   <script src="./script.js"></script>
 </body>
