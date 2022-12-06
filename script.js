@@ -33,8 +33,6 @@ function displayTime() {
   }
 };
 
-
-
 function GameOver() {
   console.log("GameOver");
   clearInterval(timerId)
@@ -76,7 +74,7 @@ function GameOver() {
 
 
 // Added EventListener
-//nextEl.addEventListener("click", pointer);
+nextEl.addEventListener("click", pointer);
 startButtonQuizEl.addEventListener("click", startQuiz);
 //Added to display the first question when page loads
 //displayQuestion();
