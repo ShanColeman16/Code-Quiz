@@ -12,6 +12,11 @@ const myQuestions = []
   myQuestions [2] = "This is question three?";
 
   //and I am presented with a question
+   var advance = function() {
+if (pointer < myQuestions.length -1)
+  pointer++;
+  };
+  
   var displayQuestions = function () {
     for (var i = 0; i < myQuestions.length; i++) {
       const myQuestions = myQuestions[0];
@@ -74,7 +79,7 @@ function GameOver() {
 
 
 // Added EventListener
-nextEl.addEventListener("click", pointer);
+//nextEl.addEventListener("click", pointer);
 startButtonQuizEl.addEventListener("click", startQuiz);
 //Added to display the first question when page loads
 //displayQuestion();
